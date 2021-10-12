@@ -76,7 +76,10 @@
   visibility: visible;
 }
 
-
+#img_wrapper img {
+  width: 100%;
+  height: auto;
+}
 
 
 
