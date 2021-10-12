@@ -1,0 +1,208 @@
+@charset "UFT-8";
+
+.container {
+  width: 100%;
+  margin: 0 auto 60px;
+  background-color: #04abed;
+  border-radius: 20px;
+  padding: 40px 40px 80px;
+  position: relative;
+}
+.container::after {
+  content: "";
+  background: url(images/javascript.png) no-repeat;
+  background-size: contain;
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: -10px;
+  bottom: -90px;
+}
+.page_ttl {
+  text-align: center;
+  margin: 0 0 40px;
+  color: #FFF;
+  font-size: 24px;
+}
+.inner {
+  /* padding: 40px 0; */
+  background-color: #FFF;
+  border-radius: 20px;
+}
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+
+/* Animation Box */
+.sec {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.sec:nth-child(2n) {
+  background-color: #EEE;
+}
+.sec p {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #04abed;
+  text-align: center;
+  line-height: 200px;/*1行のテキストを天地ど真ん中*/
+  color: #FFF;
+  font-weight: bold;
+  font-size: 20px;
+}
+.animate__animated {
+  visibility: hidden;
+}
+.animate__animated.visi {
+  visibility: visible;
+}
+
+
+
+
+
+
+/* ヘッダー */
+
+/*stickyのヘッダーをfooter手前に配置した際のデモ用*/
+
+/* footer {
+  width: 100%;
+  height: 1600px;
+  background-color: #EEE;
+  position: relative;
+}
+footer p {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+} */
+html.scrollPrevent {
+  overflow: hidden;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  color: #FFF;
+}
+header .container {
+  padding-bottom: 40px;
+}
+header .container::after {
+  background-image: none;
+}
+
+
+/*  ハンバーガーメニュー  */
+#gnav {
+  list-style: none;
+  width: 80vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: -100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  opacity: 0;
+  transition: 1s all;
+}
+#gnav a {
+  color: #FFF;
+  display: block;
+  border-bottom: solid 1px #999;
+  padding: 2em 0;
+  text-align: center;
+  text-decoration: none;
+}
+#gnav a:hover {
+  background-color: #333;
+}
+#hamburger_menu.active ~ #gnav {
+  left: 0;
+  opacity: 1;
+}
+#hamburger_menu {
+  position: relative;
+  z-index: 100;
+  width: 40px;
+  height: 18px;
+  cursor: pointer;
+}
+#hamburger_menu,
+#hamburger_menu span {
+    display: inline-block;
+    box-sizing: border-box;
+    transition: all .4s;
+}
+#hamburger_menu span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    /*background-color: #f4b3ff;春*/
+    background-color: rgb(255, 255, 255);
+}
+#hamburger_menu span:nth-of-type(1) {
+    top: 0;
+}
+#hamburger_menu span:nth-of-type(2) {
+    top: 8px;
+}
+#hamburger_menu span:nth-of-type(3) {
+    top: 16px;
+}
+#hamburger_menu::after {
+    position: absolute;
+    top: 20px;
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    /* content: 'MENU'; */
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 10px;
+    transition: all .4s;
+}
+#hamburger_menu.active::after {
+    top: 24px;
+    left: 0;
+    /* content: 'CLOSE'; */
+}
+#hamburger_menu.active span:nth-of-type(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+#hamburger_menu.active span:nth-of-type(2) {
+    opacity: 0;
+}
+#hamburger_menu.active span:nth-of-type(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
