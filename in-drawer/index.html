@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawer</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header_inner">
+        <h1>Drawer</h1>
+        <div id="gnav_wrapper">
+          <div id="hamburger_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div><!--hamburger_menu-->
+          <nav id="gnav">
+            <ul>
+              <li><input type="file" id="file"></li>
+              <li><a href="#sec01">セクション１</a></li>
+              <li><a href="#sec02">セクション２</a></li>
+              <li><a href="#sec03">セクション３</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- /#gnav_wrapper -->
+      </div>
+      <!-- /.header_inner -->
+    </div>
+    <!-- /.container -->
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page_ttl">Drawer and Scroll Animation</h1>
+      <div class="inner">
+        <section class="sec" id="sec00">
+          <div id="img_wrapper">
+          </div>
+          <!-- /#img_wrapper -->
+        </section>
+        <section class="sec" id="sec01">
+          <p class="animate__animated" data-animation="animate__rubberBand">セクション1</p>
+        </section>
+        <section class="sec" id="sec02">
+          <p class="animate__animated" data-animation="animate__rubberBand">セクション2</p>
+        </section>
+        <section class="sec" id="sec03">
+          <p class="animate__animated" data-animation="animate__flip">セクション3</p>
+        </section>
+      </div>
+      <!-- /.inner -->
+    </div>
+    <!-- /.container -->
+  </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
